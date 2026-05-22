@@ -197,7 +197,8 @@ nav a:hover { color: var(--red); opacity: 1; }
 .news-kicker {
   font-size: 13px;
   letter-spacing: 0.1em;
-  color: var(--sub);
+  color: var(--red);
+  opacity: 0.7;
   margin-bottom: 20px;
 }
 .news-title {
@@ -288,7 +289,8 @@ nav a:hover { color: var(--red); opacity: 1; }
 }
 .news-category {
   font-size: 13px;
-  color: var(--sub);
+  color: var(--red);
+  opacity: 0.7;
 }
 .news-card-title {
   font-size: 15px;
@@ -460,7 +462,8 @@ nav a:hover { color: var(--red); opacity: 1; }
 .access-label {
   font-size: 11px;
   letter-spacing: 0.2em;
-  color: var(--sub);
+  color: var(--red);
+  opacity: 0.8;
   margin-bottom: 32px;
 }
 .access-info dt {
@@ -594,8 +597,17 @@ footer {
   text-align: center;
 }
 
+/* ========== SEC EN LABEL ========== */
+.sec-en {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: var(--red);
+  opacity: 0.55;
+  text-transform: uppercase;
+}
+
 /* ========== NEWS MORE ========== */
-.news-more { display: none; }
+.news-more { display: none; color: var(--red); }
 
 /* ========== PROTOTYPE ========== */
 .prototype-badge {
@@ -654,7 +666,7 @@ footer {
   .news-label-v { flex-direction: row; align-items: center; padding-top: 0; gap: 8px; }
   .news-label-v .deco { width: 20px; height: 1px; margin: 0; }
   .news-label-v span { display: inline; font-size: 14px; }
-  .news-more { display: block !important; padding: 12px 20px 24px; font-size: 13px; color: var(--sub); text-decoration: none; letter-spacing: 0.05em; }
+  .news-more { display: block !important; padding: 12px 20px 24px; font-size: 13px; color: var(--red); text-decoration: none; letter-spacing: 0.05em; }
   .news-more:hover { opacity: 0.6; }
 
   /* Lead 非表示 */
@@ -767,6 +779,7 @@ footer {
       <div class="deco"></div>
     </div>
     <div class="news-main-body">
+      <p class="sec-en">Information</p>
       <p class="news-kicker">2026.08.16　10:30 更新</p>
       <h2 class="news-title">【ダミーです】本日の灯籠流しは中止となりました</h2>
       <p class="news-body">
@@ -832,6 +845,7 @@ footer {
 <!-- Lead：枝垂れ桜 -->
 <section class="lead">
   <img class="lead-img" src="images/main/main_goaisatu.jpg" alt="枝垂れ桜とおしろい薬師">
+  <p class="sec-en">Our Temple</p>
   <h2 class="lead-title">枝垂れ桜とおしろい薬師</h2>
   <p class="lead-body">
     安養院は正式名称を「医王山 安養院 真福寺」といいます。<br>
@@ -844,6 +858,7 @@ footer {
 <!-- 4カード -->
 <section class="cards">
   <div class="cards-inner">
+    <p class="sec-en" style="margin-bottom: 32px;">Services</p>
     <div class="cards-grid">
 
       <div class="card">
@@ -890,6 +905,7 @@ footer {
   <div class="about-inner">
     <img class="about-img about-img-pc" src="images/main/main_anyoinshoukai.jpg" alt="安養院について">
     <img class="about-img about-img-sp" src="images/main/main_goaisatu.jpg" alt="安養院について">
+    <p class="sec-en">About Us</p>
     <h3 class="about-title">安養院について</h3>
     <p class="about-body">
       安養院の起源や歴史、ご本尊などのご仏像、最近の取り組みを紹介します<br>
