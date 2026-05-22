@@ -1076,6 +1076,16 @@ $(function() {
     arrows: false,
     pauseOnHover: false
   });
+
+  // スライドが切り替わるたびにFV01のアニメーションをリセット
+  $('.mv-slider').on('beforeChange', function(e, slick, current, next) {
+    if (next === 0) {
+      var img = $('.mv-fv01')[0];
+      img.style.animation = 'none';
+      img.offsetHeight; // reflow
+      img.style.animation = '';
+    }
+  });
 });
 </script>
 
