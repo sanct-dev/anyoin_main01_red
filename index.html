@@ -279,9 +279,9 @@ nav a:hover { color: var(--red); opacity: 1; }
   object-fit: cover;
   flex-shrink: 0;
   background: #ddd;
-  transition: transform 0.6s ease;
+  transition: filter 0.4s ease;
 }
-.news-card:hover .news-thumb { transform: scale(1.08); }
+.news-card:hover .news-thumb { filter: brightness(0.85); }
 .news-card-text {
   display: flex;
   flex-direction: column;
@@ -372,9 +372,9 @@ nav a:hover { color: var(--red); opacity: 1; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: filter 0.4s ease;
 }
-.card:hover .card-img { transform: scale(1.05); }
+.card:hover .card-img { filter: brightness(0.85); }
 .card-title {
   font-size: 19px;
   letter-spacing: 0.1em;
@@ -423,10 +423,10 @@ nav a:hover { color: var(--red); opacity: 1; }
   width: 100%;
   height: 430px;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: filter 0.4s ease;
   display: block;
 }
-.about-img-wrap:hover .about-img { transform: scale(1.04); }
+.about-img-wrap:hover .about-img { filter: brightness(0.85); }
 .about-img-sp { display: none; }
 .about-title {
   font-size: 18px;
@@ -623,7 +623,19 @@ footer {
 }
 
 /* ========== NEWS MORE ========== */
-.news-more { display: none; color: var(--red); }
+.news-more {
+  display: block;
+  padding: 28px 60px;
+  font-size: 13px;
+  color: var(--red);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-align: right;
+  max-width: var(--width);
+  margin: 0 auto;
+  transition: opacity 0.2s;
+}
+.news-more:hover { opacity: 0.6; }
 
 /* ========== PROTOTYPE ========== */
 .prototype-badge {
@@ -682,8 +694,7 @@ footer {
   .news-label-v { flex-direction: row; align-items: center; padding-top: 0; gap: 8px; }
   .news-label-v .deco { width: 20px; height: 1px; margin: 0; }
   .news-label-v span { display: inline; font-size: 14px; }
-  .news-more { display: block !important; padding: 12px 20px 24px; font-size: 13px; color: var(--red); text-decoration: none; letter-spacing: 0.05em; }
-  .news-more:hover { opacity: 0.6; }
+  .news-more { padding: 12px 20px 24px; text-align: left; }
 
   /* Lead 非表示 */
   .lead { display: none; }
@@ -855,7 +866,7 @@ footer {
       <div class="sns-icon"></div>
     </div>
   </div>
-  <a href="#" class="news-more">おしらせ一覧へ &rsaquo;</a>
+  <a href="#" class="news-more">おしらせをもっとみる &rsaquo;</a>
 </section>
 
 <!-- Lead：枝垂れ桜 -->
