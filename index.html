@@ -97,6 +97,16 @@ nav a:hover { color: var(--red); opacity: 1; }
   background: var(--text);
 }
 
+/* ========== FV01 ケンバーンズ ========== */
+@keyframes sakura-pan {
+  0%   { transform: scale(1.25) translateX(-3%); }
+  100% { transform: scale(1.12) translateX(3%);  }
+}
+.mv-fv01 {
+  animation: sakura-pan 12s ease-in-out infinite alternate;
+  object-position: center 60%;
+}
+
 /* ========== MV（Slick） ========== */
 .mv-wrap {
   height: 100vh;
@@ -747,7 +757,7 @@ footer {
 
     <!-- fv01：全面1枚（桜） -->
     <div class="mv-slide">
-      <img class="mv-full mv-fv01" src="images/fv/fv01_sakura.jpg" alt="安養院 枝垂れ桜" style="transform: scale(1.2); transform-origin: center center; object-position: center 60%;">
+      <img class="mv-full mv-fv01" src="images/fv/fv01_sakura.jpg" alt="安養院 枝垂れ桜">
     </div>
 
     <!-- fv02：左右2枚（六地蔵・蓮） -->
