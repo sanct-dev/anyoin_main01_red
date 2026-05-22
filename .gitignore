@@ -1,0 +1,7 @@
+# 上げないフォルダ・ファイル
+gitあげない/
+txt/
+git保存.command
+
+# macOS
+.DS_Store
