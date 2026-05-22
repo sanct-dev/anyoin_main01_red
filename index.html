@@ -401,7 +401,7 @@ nav a:hover { color: var(--red); opacity: 1; }
   border-bottom: 1px solid rgba(142,26,26,0.3);
   transition: border-color 0.2s, opacity 0.2s;
 }
-.card-btn::after { content: '→'; font-size: 12px; }
+.card-btn::after { content: '›'; font-size: 14px; }
 .card-btn:hover { border-color: var(--red); opacity: 0.7; }
 
 /* ========== ABOUT ========== */
@@ -453,7 +453,7 @@ nav a:hover { color: var(--red); opacity: 1; }
   border-bottom: 1px solid rgba(142,26,26,0.3);
   transition: border-color 0.2s, opacity 0.2s;
 }
-.about-btn::after { content: '→'; font-size: 12px; }
+.about-btn::after { content: '›'; font-size: 14px; }
 .about-btn:hover { border-color: var(--red); opacity: 0.7; }
 
 /* ========== ACCESS ========== */
@@ -667,6 +667,7 @@ footer {
   .mv-pair { position: static; display: flex; flex-direction: column; height: 100%; width: 100% !important; }
   .mv-pair-item { position: static; width: 100% !important; height: 50%; left: auto; }
   .mv-slide .mv-pair > img { width: 100% !important; height: 50%; }
+  .mv-fv01 { object-position: 65% center; }
   .slick-dots { bottom: 10px; }
   .slick-dots li { margin: 0 2px; }
   .slick-dots li button:before { font-size: 6px; }
@@ -716,7 +717,7 @@ footer {
   .card { gap: 14px; }
   .card-title { font-size: 15px; }
   .card-body { font-size: 13px; line-height: 1.7; }
-  .card-btn { width: 140px; height: 30px; font-size: 13px; }
+  .card-btn { font-size: 13px; }
   .card-about-sp { display: none !important; }
 
   /* About：表示維持（横幅いっぱい） */
@@ -747,7 +748,7 @@ footer {
 
     <!-- fv01：全面1枚（桜） -->
     <div class="mv-slide">
-      <img class="mv-full" src="images/fv/fv01_sakura.jpg" alt="安養院 枝垂れ桜" style="transform: scale(1.2); transform-origin: center center;">
+      <img class="mv-full mv-fv01" src="images/fv/fv01_sakura.jpg" alt="安養院 枝垂れ桜" style="transform: scale(1.2); transform-origin: center center;">
     </div>
 
     <!-- fv02：左右2枚（六地蔵・蓮） -->
@@ -891,35 +892,35 @@ footer {
         <div class="card-img-wrap"><img class="card-img" src="images/con_card/card01_houyou.jpeg" alt="法要・お葬式"></div>
         <h3 class="card-title">法要・お葬式</h3>
         <p class="card-body">枕経・通夜・葬儀から年忌法要まで、天台宗の伝統的な作法に則って執り行っています。故人様が安らかに浄土へ向かえるよう、心を込めてご供養いたします。</p>
-        <a href="#" class="card-btn">詳しくはこちら</a>
+        <a href="#" class="card-btn">詳しく見る</a>
       </div>
 
       <div class="card">
         <div class="card-img-wrap"><img class="card-img" src="images/con_card/card02_ohaka.jpg" alt="お墓" style="object-position: center bottom;"></div>
         <h3 class="card-title">お墓</h3>
         <p class="card-body">それぞれのご事情やご家族の形に合わせた多様なお墓をご用意しています。どうぞご相談ください。</p>
-        <a href="#" class="card-btn">詳しくはこちら</a>
+        <a href="#" class="card-btn">詳しく見る</a>
       </div>
 
       <div class="card">
         <div class="card-img-wrap"><img class="card-img" src="images/con_card/card03_gokigan.jpeg" alt="厄除け・御祈願" style="object-position: center top;"></div>
         <h3 class="card-title">厄除け・御祈願</h3>
         <p class="card-body">厄除け・家内安全・病気平癒など様々な御祈願を随時承っています。節分会では護摩祈祷にて厄を焼き払い、安泰をお祈りいたします。お札やお守りのご依頼も受け付けております。</p>
-        <a href="#" class="card-btn">詳しくはこちら</a>
+        <a href="#" class="card-btn">詳しく見る</a>
       </div>
 
       <div class="card">
         <div class="card-img-wrap"><img class="card-img" src="images/con_card/card04_gyouji.jpg" alt="年中行事"></div>
         <h3 class="card-title">年中行事</h3>
         <p class="card-body">初詣、節分会の厄除け護摩祈祷、盂蘭盆会、灯籠流し、大般若転読会。笂井の地で長く受け継がれてきた、安養院の一年をご紹介します。</p>
-        <a href="#" class="card-btn">詳しくはこちら</a>
+        <a href="#" class="card-btn">詳しく見る</a>
       </div>
 
       <div class="card card-about-sp" style="display:none;">
         <div class="card-img-wrap"><img class="card-img" src="images/main/main_anyoinshoukai.jpg" alt="安養院について"></div>
         <h3 class="card-title">安養院について</h3>
         <p class="card-body">安養院の起源や歴史、ご本尊などのご仏像、最近の取り組みを紹介します。</p>
-        <a href="#" class="card-btn">詳しくはこちら</a>
+        <a href="#" class="card-btn">詳しく見る</a>
       </div>
 
     </div>
@@ -939,7 +940,7 @@ footer {
       安養院の起源や歴史、ご本尊などのご仏像、最近の取り組みを紹介します<br>
       地域にまつわるお話もご覧ください
     </p>
-    <a href="#" class="about-btn">詳しくはこちら</a>
+    <a href="#" class="about-btn">詳しく見る</a>
   </div>
 </section>
 
