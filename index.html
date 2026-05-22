@@ -660,14 +660,12 @@ footer {
   .hamburger { display: flex; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
 
   /* MV */
-  .mv-wrap { height: 75vh; min-height: 400px; }
-  .mv-slide { height: 75vh; min-height: 400px; }
-  .mv-slide .mv-pair img { width: 50%; height: 100%; }
+  .mv-wrap { height: 100svh; min-height: 500px; }
+  .mv-slide { height: 100svh; min-height: 500px; }
   .mv-wrap .slick-slide { width: 100vw !important; }
-  .mv-pair { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: auto !important; }
-  .mv-pair-item { position: absolute; top: 0; bottom: 0; width: 50% !important; }
-  .mv-pair-item:first-child { left: 0; }
-  .mv-pair-item:last-child { left: 50%; }
+  /* pair：縦積みにして各画像が50%ずつ */
+  .mv-pair { position: static; display: flex; flex-direction: column; height: 100%; width: 100% !important; }
+  .mv-pair-item { position: static; width: 100% !important; height: 50%; left: auto; }
   .slick-dots { bottom: 10px; }
   .slick-dots li { margin: 0 2px; }
   .slick-dots li button:before { font-size: 6px; }
