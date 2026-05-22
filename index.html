@@ -270,6 +270,7 @@ nav a:hover { color: var(--red); opacity: 1; }
   padding: 36px 10px;
   text-decoration: none;
   transition: opacity 0.2s;
+  overflow: hidden;
 }
 .news-card:hover { opacity: 0.7; }
 .news-thumb {
@@ -278,7 +279,9 @@ nav a:hover { color: var(--red); opacity: 1; }
   object-fit: cover;
   flex-shrink: 0;
   background: #ddd;
+  transition: transform 0.6s ease;
 }
+.news-card:hover .news-thumb { transform: scale(1.08); }
 .news-card-text {
   display: flex;
   flex-direction: column;
@@ -359,11 +362,19 @@ nav a:hover { color: var(--red); opacity: 1; }
   align-items: center;
   gap: 27px;
 }
-.card-img {
+.card-img-wrap {
   width: 100%;
   height: 376px;
-  object-fit: cover;
+  overflow: hidden;
+  flex-shrink: 0;
 }
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.card:hover .card-img { transform: scale(1.05); }
 .card-title {
   font-size: 19px;
   letter-spacing: 0.1em;
@@ -404,11 +415,18 @@ nav a:hover { color: var(--red); opacity: 1; }
   align-items: center;
   gap: 20px;
 }
+.about-img-wrap {
+  width: 100%;
+  overflow: hidden;
+}
 .about-img {
   width: 100%;
   height: 430px;
   object-fit: cover;
+  transition: transform 0.6s ease;
+  display: block;
 }
+.about-img-wrap:hover .about-img { transform: scale(1.04); }
 .about-img-sp { display: none; }
 .about-title {
   font-size: 18px;
@@ -675,16 +693,16 @@ footer {
   .cards-grid { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
   /* 年中行事（4番目）：全幅・最上部 */
   .cards-grid .card:nth-child(4) { order: 1; grid-column: 1 / -1; margin-bottom: 12px; }
-  .cards-grid .card:nth-child(4) .card-img { height: 52vw; }
+  .cards-grid .card:nth-child(4) .card-img-wrap { height: 52vw; }
   /* 厄除け（3番目）：全幅・2番目 */
   .cards-grid .card:nth-child(3) { order: 2; grid-column: 1 / -1; }
-  .cards-grid .card:nth-child(3) .card-img { height: 52vw; }
+  .cards-grid .card:nth-child(3) .card-img-wrap { height: 52vw; }
   /* 法要（1番目）・お墓（2番目）：2列・説明文非表示 */
   .cards-grid .card:nth-child(1) { order: 3; }
   .cards-grid .card:nth-child(2) { order: 4; }
   .cards-grid .card:nth-child(1) .card-body,
   .cards-grid .card:nth-child(2) .card-body { display: none; }
-  .card-img { height: 38vw; }
+  .card-img-wrap { height: 38vw; }
   .card { gap: 14px; }
   .card-title { font-size: 15px; }
   .card-body { font-size: 13px; line-height: 1.7; }
@@ -860,35 +878,35 @@ footer {
     <div class="cards-grid">
 
       <div class="card">
-        <img class="card-img" src="images/con_card/card01_houyou.jpeg" alt="法要・お葬式">
+        <div class="card-img-wrap"><img class="card-img" src="images/con_card/card01_houyou.jpeg" alt="法要・お葬式"></div>
         <h3 class="card-title">法要・お葬式</h3>
         <p class="card-body">枕経・通夜・葬儀から年忌法要まで、天台宗の伝統的な作法に則って執り行っています。故人様が安らかに浄土へ向かえるよう、心を込めてご供養いたします。</p>
         <a href="#" class="card-btn">詳しくはこちら</a>
       </div>
 
       <div class="card">
-        <img class="card-img" src="images/con_card/card02_ohaka.jpg" alt="お墓" style="object-position: center bottom;">
+        <div class="card-img-wrap"><img class="card-img" src="images/con_card/card02_ohaka.jpg" alt="お墓" style="object-position: center bottom;"></div>
         <h3 class="card-title">お墓</h3>
         <p class="card-body">それぞれのご事情やご家族の形に合わせた多様なお墓をご用意しています。どうぞご相談ください。</p>
         <a href="#" class="card-btn">詳しくはこちら</a>
       </div>
 
       <div class="card">
-        <img class="card-img" src="images/con_card/card03_gokigan.jpeg" alt="厄除け・御祈願" style="object-position: center top;">
+        <div class="card-img-wrap"><img class="card-img" src="images/con_card/card03_gokigan.jpeg" alt="厄除け・御祈願" style="object-position: center top;"></div>
         <h3 class="card-title">厄除け・御祈願</h3>
         <p class="card-body">厄除け・家内安全・病気平癒など様々な御祈願を随時承っています。節分会では護摩祈祷にて厄を焼き払い、安泰をお祈りいたします。お札やお守りのご依頼も受け付けております。</p>
         <a href="#" class="card-btn">詳しくはこちら</a>
       </div>
 
       <div class="card">
-        <img class="card-img" src="images/con_card/card04_gyouji.jpg" alt="年中行事">
+        <div class="card-img-wrap"><img class="card-img" src="images/con_card/card04_gyouji.jpg" alt="年中行事"></div>
         <h3 class="card-title">年中行事</h3>
         <p class="card-body">初詣、節分会の厄除け護摩祈祷、盂蘭盆会、灯籠流し、大般若転読会。笂井の地で長く受け継がれてきた、安養院の一年をご紹介します。</p>
         <a href="#" class="card-btn">詳しくはこちら</a>
       </div>
 
       <div class="card card-about-sp" style="display:none;">
-        <img class="card-img" src="images/main/main_anyoinshoukai.jpg" alt="安養院について">
+        <div class="card-img-wrap"><img class="card-img" src="images/main/main_anyoinshoukai.jpg" alt="安養院について"></div>
         <h3 class="card-title">安養院について</h3>
         <p class="card-body">安養院の起源や歴史、ご本尊などのご仏像、最近の取り組みを紹介します。</p>
         <a href="#" class="card-btn">詳しくはこちら</a>
@@ -901,8 +919,10 @@ footer {
 <!-- 安養院について -->
 <section class="about">
   <div class="about-inner">
-    <img class="about-img about-img-pc" src="images/main/main_anyoinshoukai.jpg" alt="安養院について">
-    <img class="about-img about-img-sp" src="images/main/main_goaisatu.jpg" alt="安養院について">
+    <div class="about-img-wrap">
+      <img class="about-img about-img-pc" src="images/main/main_anyoinshoukai.jpg" alt="安養院について">
+      <img class="about-img about-img-sp" src="images/main/main_goaisatu.jpg" alt="安養院について">
+    </div>
     <p class="sec-en">About Us</p>
     <h3 class="about-title">安養院について</h3>
     <p class="about-body">
